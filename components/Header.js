@@ -68,7 +68,7 @@ export default function Header() {
             <li><Link href="/">Home</Link></li>
             <li><Link href="/about">About TSBS</Link></li>
             <li><Link href="/academics">Academics</Link></li>
-            <li><Link href="/admission">Admission</Link></li>
+            <li><Link href="/admissions">Admission</Link></li>
             <li><Link href="/contact">Contact</Link></li>
           </ul>
         </nav>
