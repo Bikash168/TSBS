@@ -1,16 +1,68 @@
-const Hero = () => (
-    <div className="relative bg-[url('/images/hero-bg.jpg')] bg-cover bg-center h-screen">
-      <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center">
-        <h1 className="text-white text-4xl md:text-6xl font-bold">Empowering Future Biotechnologists</h1>
-        <p className="text-gray-300 mt-4 text-center max-w-xl">
-          Leading the way in biotechnology education with cutting-edge research and innovation.
-        </p>
-        <button className="bg-blue-600 text-white px-6 py-2 mt-6 rounded hover:bg-blue-700">
-          Learn More
-        </button>
-      </div>
-    </div>
+// components/EventCarousel.js
+import { Carousel } from 'react-responsive-carousel';
+
+const EventCarousel = () => {
+  return (
+    <section className="event-carousel">
+      <Carousel
+        autoPlay
+        interval={5000} // Set time interval for each slide (5000ms = 5 seconds)
+        infiniteLoop // Enable infinite loop for continuous cycling
+        showThumbs={false}
+        showStatus={false}
+        showArrows // Enable navigation arrows
+        stopOnHover={false} // Ensure auto-play continues even on hover
+        className="mt-16"
+      >
+        {/* Slide 1 */}
+        <div>
+          <img
+            src="/images/event1.jpeg"
+            alt="College Fest 2024"
+            className="w-full h-[80vh] object-cover"
+          />
+          <p className="legend bg-black bg-opacity-60 text-white py-2 text-center">
+          Join the movement towards advancing bioeconomy and biomanufacturing, shaping a sustainable and prosperous future for India. 
+          </p>
+        </div>
+
+        {/* Slide 2 */}
+        <div>
+          <img
+            src="/images/event2.jpeg"
+            alt="Annual Sports Day"
+            className="w-full h-[80vh] object-cover"
+          />
+          <p className="legend bg-black bg-opacity-60 text-white py-2 text-center">
+          A DSIR-certified Scientific and Industrial Research Organization (SIRO)
+          </p>
+        </div>
+
+        {/* Slide 3 */}
+        <div>
+          <img
+            src="/images/event3.jpeg"
+            alt="Graduation Ceremony"
+            className="w-full h-[80vh] object-cover"
+          />
+          <p className="legend bg-black bg-opacity-60 text-white py-2 text-center">
+          Teaching and research are strengthened through our association with IIT-Bhubaneswar, DBT-ILS, and CSIR-IMMT. 
+          </p>
+        </div>
+            {/* Slide 4 */}
+            <div>
+          <img
+            src="/images/event4.jpg"
+            alt="Graduation Ceremony"
+            className="w-full h-[80vh] object-cover"
+          />
+          <p className="legend bg-black bg-opacity-60 text-white py-2 text-center">
+           Affiliated with Utkal University, Odisha, and permanently recognized by the Department of Higher Education, Government of Odisha.
+          </p>
+        </div>
+      </Carousel>
+    </section>
   );
-  
-  export default Hero;
-  
+};
+
+export default EventCarousel;
