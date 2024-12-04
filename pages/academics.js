@@ -1,10 +1,8 @@
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Layout from '../components/Layout';
 
 export default function Academics() {
   return (
-    <>
-      <Header />
+    <Layout title="Academics | TSBS">
       <main className="container mx-auto my-10">
         {/* Page Title */}
         <section className="text-center">
@@ -77,7 +75,6 @@ export default function Academics() {
           </p>
         </section>
       </main>
-      <Footer />
-    </>
+    </Layout>
   );
 }

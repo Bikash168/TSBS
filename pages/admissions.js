@@ -1,23 +1,21 @@
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Layout from '../components/Layout';
 
 export default function Admissions() {
   return (
-    <>
-      <Header />
-      <main className="container mx-auto my-10">
+    <Layout title="Admissions | TSBS">
+      <main className="container mx-auto px-4 my-10 space-y-16">
         {/* Page Title */}
-        <section className="text-center">
-          <h1 className="text-4xl font-bold text-teal-600">Admissions at TSBS</h1>
-          <p className="mt-4 text-lg text-gray-700">
+        <section className="text-center space-y-4">
+          <h1 className="text-4xl font-extrabold text-teal-600">Admissions at TSBS</h1>
+          <p className="text-lg text-gray-700">
             Start your journey with TACT-School of Biotech Sciences (TSBS) and be part of a vibrant academic community.
           </p>
         </section>
 
         {/* Admission Process */}
-        <section className="my-16">
-          <h2 className="text-2xl font-bold text-teal-600">Admission Process</h2>
-          <p className="mt-4 text-lg text-gray-700">
+        <section className="space-y-6">
+          <h2 className="text-3xl font-bold text-teal-600 text-center">Admission Process</h2>
+          <p className="text-lg text-gray-700 text-center">
             Follow these steps to secure your spot at TSBS:
           </p>
           <ol className="list-decimal list-inside mt-4 text-lg text-gray-700 space-y-2">
@@ -30,8 +28,8 @@ export default function Admissions() {
         </section>
 
         {/* Eligibility Criteria */}
-        <section className="my-16">
-          <h2 className="text-2xl font-bold text-teal-600">Eligibility Criteria</h2>
+        <section className="space-y-6">
+          <h2 className="text-3xl font-bold text-teal-600 text-center">Eligibility Criteria</h2>
           <ul className="list-disc list-inside mt-4 text-lg text-gray-700 space-y-2">
             <li><strong>B.Tech (Biotechnology):</strong> 10+2 with a minimum of 50% in Science (Physics, Chemistry, Mathematics/Biology).</li>
             <li><strong>B.Sc. (Biotechnology):</strong> 10+2 with a minimum of 50% in Science (Biology preferred).</li>
@@ -45,9 +43,9 @@ export default function Admissions() {
         </section>
 
         {/* Key Dates */}
-        <section className="my-16">
-          <h2 className="text-2xl font-bold text-teal-600">Key Dates</h2>
-          <table className="table-auto w-full mt-4 border-collapse border border-gray-200">
+        <section className="space-y-6">
+          <h2 className="text-3xl font-bold text-teal-600 text-center">Key Dates</h2>
+          <table className="table-auto w-full mt-4 border-collapse border border-gray-200 text-left">
             <thead>
               <tr className="bg-teal-100">
                 <th className="border border-gray-200 px-4 py-2">Event</th>
@@ -75,22 +73,21 @@ export default function Admissions() {
           </table>
         </section>
 
-        {/* Contact Information */}
-        <section className="my-16">
-          <h2 className="text-2xl font-bold text-teal-600">Contact for Admissions</h2>
-          <p className="mt-4 text-lg text-gray-700">
+        {/* Contact for Admissions */}
+        <section className="space-y-6 text-center">
+          <h2 className="text-3xl font-bold text-teal-600">Contact for Admissions</h2>
+          <p className="text-lg text-gray-700">
             For any inquiries related to admissions, please contact:
           </p>
           <p className="mt-4 text-lg text-gray-700">
             <strong>Email:</strong> admissions@tsbs.ac.in <br />
             <strong>Phone:</strong> +91 9337528083
           </p>
-          <p className="mt-4 text-lg text-gray-700">
+          <p className="text-lg text-gray-700">
             Visit us at: F2, Chandaka Industrial Estate, Infocity Area, Bhubaneswar - 751024
           </p>
         </section>
       </main>
-      <Footer />
-    </>
+    </Layout>
   );
 }

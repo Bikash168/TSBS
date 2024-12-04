@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <Layout>
       <Hero />
-
+      <main className="container mx-auto px-4 my-10 space-y-16">
       {/* Welcome Section */}
       <section className="text-center space-y-6">
         <h1 className="text-4xl font-bold text-teal-600">Welcome to TSBS</h1>
@@ -116,6 +116,7 @@ export default function Home() {
           </p>
         </div>
       </section>
+      </main>
     </Layout>
   );
 }

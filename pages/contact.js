@@ -2,7 +2,7 @@ import Layout from '../components/Layout';
 
 export default function Contact() {
   return (
-    <Layout>
+    <Layout  title="Contact | TSBS">
       {/* Page Title */}
       <section className="text-center my-10">
         <h1 className="text-4xl font-bold text-teal-600">Contact Us</h1>
