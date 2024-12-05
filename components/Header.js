@@ -2,8 +2,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import Link from 'next/link';
+import { useState } from 'react';
 
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <header className="bg-white shadow">
       {/* Top Section */}
@@ -63,7 +70,16 @@ export default function Header() {
             className="h-12"
           />
         </div>
-        <nav>
+
+        {/* Hamburger Menu for Small Screens */}
+        <div className="lg:hidden flex items-center">
+          <button onClick={toggleMenu} className="text-teal-900">
+            <FontAwesomeIcon icon={isMenuOpen ? 'times' : 'bars'} className="h-6 w-6" />
+          </button>
+        </div>
+
+        {/* Navigation Menu */}
+        <nav className={`lg:flex ${isMenuOpen ? 'block' : 'hidden'} space-x-6`}>
           <ul className="flex space-x-6">
             <li><Link href="/">Home</Link></li>
             <li><Link href="/about">About TSBS</Link></li>
