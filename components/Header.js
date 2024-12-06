@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';  // Import bars and times icons
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'; // Import bars and times icons
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -13,7 +13,7 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-white shadow">
+    <header className="bg-white shadow sticky top-0 z-50">
       {/* Top Section */}
       <div className="bg-teal-100 p-2 text-teal-900">
         <div className="container mx-auto flex justify-between items-center">
@@ -68,7 +68,7 @@ export default function Header() {
           <img
             src="/logo.png"
             alt="Trident Academy Logo"
-            className="h-12"
+            className="h-16 w-22"
           />
         </div>
 

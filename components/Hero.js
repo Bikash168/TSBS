@@ -12,7 +12,7 @@ const EventCarousel = () => {
         showStatus={false}
         showArrows // Enable navigation arrows
         stopOnHover={false} // Ensure auto-play continues even on hover
-        className="mt-16"
+       
       >
         {/* Slide 1 */}
         <div>
