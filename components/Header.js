@@ -64,12 +64,15 @@ export default function Header() {
 
       {/* Bottom Section */}
       <div className="container mx-auto p-4 flex justify-between items-center">
+        {/* Logo Section: Wrap the logo with Link */}
         <div>
-          <img
-            src="/logo.png"
-            alt="Trident Academy Logo"
-            className="h-16 w-22"
-          />
+          <Link href="/">
+            <img
+              src="/logo.png"
+              alt="Trident Academy Logo"
+              className="h-16 w-26 cursor-pointer"
+            />
+          </Link>
         </div>
 
         {/* Hamburger Menu for Small Screens */}
