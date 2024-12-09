@@ -1,7 +1,16 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'; // Import bars and times icons
+import {
+  faPhone,
+  faEnvelope,
+  faBars,
+  faTimes
+} from '@fortawesome/free-solid-svg-icons';
+import {
+  faFacebook,
+  faTwitter,
+  faInstagram,
+  faLinkedin
+} from '@fortawesome/free-brands-svg-icons';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -19,13 +28,11 @@ export default function Header() {
         <div className="container mx-auto flex justify-between items-center">
           {/* Contact Information */}
           <div className="flex items-center space-x-6">
-            {/* Mobile Number */}
             <span className="flex items-center">
               <FontAwesomeIcon icon={faPhone} className="mr-2 text-teal-900" />
               9337528083
             </span>
 
-            {/* Email ID */}
             <span className="flex items-center">
               <FontAwesomeIcon icon={faEnvelope} className="mr-2 text-teal-900" />
               info@tsbs.ac.in
@@ -64,13 +71,13 @@ export default function Header() {
 
       {/* Bottom Section */}
       <div className="container mx-auto p-4 flex justify-between items-center">
-        {/* Logo Section: Wrap the logo with Link */}
+        {/* Logo Section */}
         <div>
           <Link href="/">
             <img
               src="/logo.png"
               alt="Trident Academy Logo"
-              className="h-16 w-26 cursor-pointer"
+              className="h-16 w-auto cursor-pointer"
             />
           </Link>
         </div>
@@ -83,16 +90,38 @@ export default function Header() {
         </div>
 
         {/* Navigation Menu */}
-        <nav className={`lg:flex ${isMenuOpen ? 'block' : 'hidden'} space-x-6`}>
-          <ul className="flex flex-col lg:flex-row space-x-0 lg:space-x-6">
-            <li><Link href="/">Home</Link></li>
-            <li><Link href="/about">About TSBS</Link></li>
-            <li><Link href="/academics">Academics</Link></li>
-            <li><Link href="/admissions">Admission</Link></li>
-            <li><Link href="/contact">Contact</Link></li>
+        <nav
+          className={`fixed top-0 left-0 w-full h-full bg-teal-900 text-white transform ${
+            isMenuOpen ? 'translate-x-0' : '-translate-x-full'
+          } transition-transform duration-300 ease-in-out lg:static lg:translate-x-0 lg:bg-transparent lg:text-teal-900 lg:flex lg:items-center lg:space-x-6`}
+        >
+          <ul className="flex flex-col items-center justify-center h-full space-y-6 lg:space-y-0 lg:flex-row lg:space-x-6">
+            <li className="text-lg font-medium hover:text-teal-300 lg:hover:text-teal-700">
+              <Link href="/" onClick={toggleMenu}>Home</Link>
+            </li>
+            <li className="text-lg font-medium hover:text-teal-300 lg:hover:text-teal-700">
+              <Link href="/about" onClick={toggleMenu}>About TSBS</Link>
+            </li>
+            <li className="text-lg font-medium hover:text-teal-300 lg:hover:text-teal-700">
+              <Link href="/academics" onClick={toggleMenu}>Academics</Link>
+            </li>
+            <li className="text-lg font-medium hover:text-teal-300 lg:hover:text-teal-700">
+              <Link href="/admissions" onClick={toggleMenu}>Admission</Link>
+            </li>
+            <li className="text-lg font-medium hover:text-teal-300 lg:hover:text-teal-700">
+              <Link href="/contact" onClick={toggleMenu}>Contact</Link>
+            </li>
           </ul>
         </nav>
       </div>
+
+      {/* Overlay for Mobile Menu */}
+      {isMenuOpen && (
+        <div
+          onClick={toggleMenu}
+          className="fixed inset-0 bg-black bg-opacity-50 lg:hidden"
+        ></div>
+      )}
     </header>
   );
 }
