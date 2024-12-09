@@ -11,14 +11,20 @@ import {
   faInstagram,
   faLinkedin
 } from '@fortawesome/free-brands-svg-icons';
-import Link from 'next/link';
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const router = useRouter();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleNavigation = (path) => {
+    setIsMenuOpen(false); // Close the menu
+    router.push(path); // Navigate to the desired page
   };
 
   return (
@@ -41,30 +47,30 @@ export default function Header() {
 
           {/* Social Media Links */}
           <div className="flex space-x-3">
-            <Link href="https://facebook.com">
+            <a href="https://facebook.com">
               <FontAwesomeIcon
                 icon={faFacebook}
                 className="text-teal-900 hover:text-teal-700 h-5 w-5"
               />
-            </Link>
-            <Link href="https://twitter.com">
+            </a>
+            <a href="https://twitter.com">
               <FontAwesomeIcon
                 icon={faTwitter}
                 className="text-teal-900 hover:text-teal-700 h-5 w-5"
               />
-            </Link>
-            <Link href="https://instagram.com">
+            </a>
+            <a href="https://instagram.com">
               <FontAwesomeIcon
                 icon={faInstagram}
                 className="text-teal-900 hover:text-teal-700 h-5 w-5"
               />
-            </Link>
-            <Link href="https://linkedin.com">
+            </a>
+            <a href="https://linkedin.com">
               <FontAwesomeIcon
                 icon={faLinkedin}
                 className="text-teal-900 hover:text-teal-700 h-5 w-5"
               />
-            </Link>
+            </a>
           </div>
         </div>
       </div>
@@ -73,13 +79,13 @@ export default function Header() {
       <div className="container mx-auto p-4 flex justify-between items-center">
         {/* Logo Section */}
         <div>
-          <Link href="/">
+          <a href="/">
             <img
               src="/logo.png"
               alt="Trident Academy Logo"
               className="h-16 w-auto cursor-pointer"
             />
-          </Link>
+          </a>
         </div>
 
         {/* Hamburger Menu for Small Screens */}
@@ -91,37 +97,29 @@ export default function Header() {
 
         {/* Navigation Menu */}
         <nav
-          className={`fixed top-0 left-0 w-full h-full bg-teal-900 text-white transform ${
+          className={`lg:static lg:bg-transparent lg:text-teal-900 lg:flex lg:items-center lg:justify-end lg:space-x-6 fixed top-0 left-0 w-full h-full bg-teal-900 text-white transform ${
             isMenuOpen ? 'translate-x-0' : '-translate-x-full'
-          } transition-transform duration-300 ease-in-out lg:static lg:translate-x-0 lg:bg-transparent lg:text-teal-900 lg:flex lg:items-center lg:space-x-6`}
+          } transition-transform duration-300 ease-in-out lg:translate-x-0 lg:flex-row`}
         >
           <ul className="flex flex-col items-center justify-center h-full space-y-6 lg:space-y-0 lg:flex-row lg:space-x-6">
             <li className="text-lg font-medium hover:text-teal-300 lg:hover:text-teal-700">
-              <Link href="/" onClick={toggleMenu}>Home</Link>
+              <button onClick={() => handleNavigation('/')}>Home</button>
             </li>
             <li className="text-lg font-medium hover:text-teal-300 lg:hover:text-teal-700">
-              <Link href="/about" onClick={toggleMenu}>About TSBS</Link>
+              <button onClick={() => handleNavigation('/about')}>About TSBS</button>
             </li>
             <li className="text-lg font-medium hover:text-teal-300 lg:hover:text-teal-700">
-              <Link href="/academics" onClick={toggleMenu}>Academics</Link>
+              <button onClick={() => handleNavigation('/academics')}>Academics</button>
             </li>
             <li className="text-lg font-medium hover:text-teal-300 lg:hover:text-teal-700">
-              <Link href="/admissions" onClick={toggleMenu}>Admission</Link>
+              <button onClick={() => handleNavigation('/admissions')}>Admission</button>
             </li>
             <li className="text-lg font-medium hover:text-teal-300 lg:hover:text-teal-700">
-              <Link href="/contact" onClick={toggleMenu}>Contact</Link>
+              <button onClick={() => handleNavigation('/contact')}>Contact</button>
             </li>
           </ul>
         </nav>
       </div>
-
-      {/* Overlay for Mobile Menu */}
-      {isMenuOpen && (
-        <div
-          onClick={toggleMenu}
-          className="fixed inset-0 bg-black bg-opacity-50 lg:hidden"
-        ></div>
-      )}
     </header>
   );
 }
