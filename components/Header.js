@@ -1,17 +1,18 @@
-import React from 'react'; // Ensure React is imported
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faPhone,
   faEnvelope,
   faBars,
   faTimes,
+} from '@fortawesome/free-solid-svg-icons';
+import {
   faFacebook,
   faTwitter,
   faInstagram,
   faLinkedin,
-} from '@fortawesome/free-solid-svg-icons';
+} from '@fortawesome/free-brands-svg-icons';
 import { useRouter } from 'next/router';
-import { useState } from 'react';
 
 const Header = () => {
   const router = useRouter();
@@ -30,44 +31,43 @@ const Header = () => {
     <header className="bg-white shadow sticky top-0 z-50">
       {/* Top Section */}
       <div className="bg-teal-100 p-2 text-teal-900 relative">
-        <div className="absolute top-0 left-0 w-full h-full bg-teal-900 clip-triangle" />
-        <div className="container mx-auto flex justify-between items-center relative z-10">
+        <div className="container mx-auto flex justify-between items-center">
           {/* Contact Information */}
           <div className="flex items-center space-x-6">
-            <span className="flex items-center">
-              <FontAwesomeIcon icon={faPhone} className="mr-2 text-white" />
+            <span className="flex items-center text-teal-900">
+              <FontAwesomeIcon icon={faPhone} className="mr-2 text-teal-900" />
               9337528083
             </span>
-            <span className="flex items-center">
-              <FontAwesomeIcon icon={faEnvelope} className="mr-2 text-white" />
+            <span className="flex items-center text-teal-900">
+              <FontAwesomeIcon icon={faEnvelope} className="mr-2 text-teal-900" />
               info@tsbs.ac.in
             </span>
           </div>
 
           {/* Social Media Links */}
           <div className="flex space-x-3">
-            <a href="https://facebook.com">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon
                 icon={faFacebook}
-                className="text-white hover:text-teal-300 h-5 w-5"
+                className="text-teal-900 hover:text-teal-700 h-5 w-5"
               />
             </a>
-            <a href="https://twitter.com">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon
                 icon={faTwitter}
-                className="text-white hover:text-teal-300 h-5 w-5"
+                className="text-teal-900 hover:text-teal-700 h-5 w-5"
               />
             </a>
-            <a href="https://instagram.com">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon
                 icon={faInstagram}
-                className="text-white hover:text-teal-300 h-5 w-5"
+                className="text-teal-900 hover:text-teal-700 h-5 w-5"
               />
             </a>
-            <a href="https://linkedin.com">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon
                 icon={faLinkedin}
-                className="text-white hover:text-teal-300 h-5 w-5"
+                className="text-teal-900 hover:text-teal-700 h-5 w-5"
               />
             </a>
           </div>
@@ -106,8 +106,8 @@ const Header = () => {
               { label: 'Academics', path: '/academics' },
               { label: 'Facilities', path: '/facilities' },
               { label: 'Activities', path: '/activities' },
-              { label: 'Admission', path: '/Admission' },
-              { label: 'Research', path: '/Research' },
+              { label: 'Admission', path: '/admission' },
+              { label: 'Research', path: '/research' },
               { label: 'Best Practices', path: '/best-practices' },
               { label: 'Training', path: '/training' },
               { label: 'Placement', path: '/placement' },
@@ -132,30 +132,28 @@ const Header = () => {
 
       {/* New Navigation Bar */}
       <div className="bg-gray-100 p-2">
-        <div className="container mx-auto flex justify-around items-center">
-          {[
-            { label: 'About TSBS', path: '/about' },
-            { label: 'Our Alumni', path: '/alumni' },
-            { label: 'Grievance', path: '/grievance' },
-            { label: 'Contact Us', path: '/contact-us' },
-            // Add other menu items here
-          ].map((menuItem) => (
-            <button
-              key={menuItem.label}
-              className="text-teal-900 hover:text-teal-700 px-4 py-2 text-sm"
-              onClick={() => handleNavigation(menuItem.path)}
-            >
-              {menuItem.label}
-            </button>
-          ))}
+        <div className="container mx-auto flex justify-center items-center">
+          <div className="flex space-x-6">
+            {[
+              { label: 'About TSBS', path: '/about' },
+              { label: 'Our Alumni', path: '/alumni' },
+              { label: 'Grievance', path: '/grievance' },
+              { label: 'Contact Us', path: '/contact-us' },
+              // Add other menu items here
+            ].map((menuItem) => (
+              <button
+                key={menuItem.label}
+                className="text-teal-900 hover:text-teal-700 px-4 py-2 text-sm"
+                onClick={() => handleNavigation(menuItem.path)}
+              >
+                {menuItem.label}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 
-      <style jsx>{`
-        .clip-triangle {
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
-        }
-      `}</style>
+   
     </header>
   );
 };
