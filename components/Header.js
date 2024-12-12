@@ -106,7 +106,7 @@ const Header = () => {
               { label: 'Academics', path: '/academics' },
               { label: 'Facilities', path: '/facilities' },
               { label: 'Activities', path: '/activities' },
-              { label: 'Admission', path: '/admission' },
+              { label: 'Admission', path: '/admissions' },
               { label: 'Research', path: '/research' },
               { label: 'Best Practices', path: '/best-practices' },
               { label: 'Training', path: '/training' },
@@ -138,7 +138,7 @@ const Header = () => {
               { label: 'About TSBS', path: '/about' },
               { label: 'Our Alumni', path: '/alumni' },
               { label: 'Grievance', path: '/grievance' },
-              { label: 'Contact Us', path: '/contact-us' },
+              { label: 'Contact Us', path: '/contact' },
               // Add other menu items here
             ].map((menuItem) => (
               <button
