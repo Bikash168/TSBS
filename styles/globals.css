@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.event-carousel {
+    position: relative;
+    overflow: hidden;
+  }
+
+  
+  body {
+    overflow-x: hidden; /* Prevent horizontal scroll issues */
+    overscroll-behavior: none; /* Smooth scrolling experience */
+  }
+  
