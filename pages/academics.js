@@ -27,10 +27,6 @@ export default function Academics() {
         <section className="lg:w-3/4 lg:pl-8 mt-10 lg:mt-0">
           <h1 className="text-4xl font-bold text-teal-600">Academics at TSBS</h1>
           <p className="mt-4 text-lg text-gray-700">Explore the programs, facilities, and academic excellence at Trident School of Biotech Sciences.</p>
-        </section>
-
-        {/* Programs Section */}
-        <section id="programs" className="my-16">
           <h2 className="text-2xl font-bold text-teal-600">Programs We Offer</h2>
           <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-4">
             {programs.map((program, idx) => (
