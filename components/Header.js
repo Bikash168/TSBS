@@ -143,7 +143,7 @@ const Header = () => {
             ].map((menuItem) => (
               <button
                 key={menuItem.label}
-                className="text-teal-900 hover:text-teal-700 px-4 py-2 text-sm"
+                className="text-teal-900 hover:text-teal-700 px-4 py-2 text-base"
                 onClick={() => handleNavigation(menuItem.path)}
               >
                 {menuItem.label}
