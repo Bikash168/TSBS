@@ -1,11 +1,12 @@
 import Layout from '../components/Layout'; // Ensure you have a Layout component for your site's structure
+import Link from 'next/link'; // Import Link from next/link
 
 const BScBiotechnology = () => {
   return (
     <Layout>
       <section className="bg-gray-100 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <nav className="w-full mb-6 text-sm text-teal-600">
+          <nav className="w-full mb-6 text-sm text-teal-600">
             <ul className="flex space-x-2">
               <li>
                 <Link href="/" className="hover:underline flex items-center">
@@ -19,13 +20,19 @@ const BScBiotechnology = () => {
                 </Link>
               </li>
               <li>/</li>
-              <li className="text-gray-500">Courses</li>
+              <li>
+                <Link href="/courses" className="hover:underline">
+                Courses
+                </Link>
+              </li>
+              <li>/</li>
+              <li className="text-gray-500">B.Sc. in Biotechnology</li>
             </ul>
           </nav>
-          <h1 className="text-4xl font-extrabold text-center text-blue-700 mb-8">B.Sc. in Biotechnology</h1>
+          <h1 className="text-4xl font-extrabold text-center text-teal-600 mb-8">B.Sc. in Biotechnology</h1>
 
           <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Program Objectives</h2>
+            <h2 className="text-2xl font-semibold text-teal-600 mb-4">Program Objectives</h2>
             <ul className="list-disc pl-6 space-y-2">
               <li className="text-lg text-gray-700">
                 To provide an understanding of the principles of basic science with scope on advanced learning in the areas of cell and molecular biology, Biochemistry, Immunology, Plant and Animal Biotechnology, and other domain specializations.
@@ -46,7 +53,7 @@ const BScBiotechnology = () => {
           </div>
 
           <div className="bg-white p-6 mt-8 rounded-lg shadow-lg">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Student Development</h2>
+            <h2 className="text-2xl font-semibold text-teal-600 mb-4">Student Development</h2>
             <ul className="list-disc pl-6 space-y-2">
               <li className="text-lg text-gray-700">
                 Development of an ability to apply the concepts of chemistry, mathematics, informatics, and statistics to biological problems.
