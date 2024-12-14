@@ -17,7 +17,7 @@ export default function Academics() {
               { name: 'M.Sc. in Applied Microbiology', link: '/m-sc-in-applied-microbiology' },
               { name: 'M.Sc. Bioinformatics', link: '/m-sc-in-bioinformatics' },
               { name: 'Master of Public Health', link: '/master-of-public-health' },
-              { name: 'Master of Social Work', link: '#master-of-social-work' },
+              { name: 'Master of Social Work', link: '/master-of-social-work' },
             ].map((item) => (
               <li key={item.name} className="hover:bg-teal-100 p-2 rounded-lg transition">
                 <Link href={item.link} className="text-teal-600 hover:text-teal-800">
