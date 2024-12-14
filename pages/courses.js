@@ -15,7 +15,7 @@ export default function Academics() {
               { name: 'M.Sc in Biotechnology', link: '/m-sc-in-biotechnology' },
               { name: 'M.Sc in Environmental Science', link: '/m-sc-in-environmental-science' },
               { name: 'M.Sc. in Applied Microbiology', link: '/m-sc-in-applied-microbiology' },
-              { name: 'M.Sc. Bioinformatics', link: '#msc-bioinformatics' },
+              { name: 'M.Sc. Bioinformatics', link: '/m-sc-in-bioinformatics' },
               { name: 'Master of Public Health', link: '#master-of-public-health' },
               { name: 'Master of Social Work', link: '#master-of-social-work' },
             ].map((item) => (
