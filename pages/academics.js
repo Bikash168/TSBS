@@ -43,9 +43,9 @@ export default function Academics() {
           <ul className="mt-6 space-y-3">
             {[
               { name: 'Courses', link: '/courses' }, // Correct route for the Courses page
-              { name: 'Faculty', link: '#faculty' },
-              { name: 'Publications', link: '#publications' },
-              { name: 'Laboratories', link: '#laboratories' },
+              { name: 'Faculty', link: '/faculty' },
+              { name: 'Publications', link: '/publications' },
+              { name: 'Laboratories', link: '/laboratories' },
               { name: 'Library', link: '#library' },
               { name: 'Advisory Board', link: '#advisoryboard' },
               { name: 'Student Projects', link: '#studentprojects' },
