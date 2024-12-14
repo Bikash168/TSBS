@@ -12,7 +12,7 @@ export default function Academics() {
           <ul className="mt-6 space-y-3">
             {[
               { name: 'B.Sc in Biotechnology', link: '/b-sc-in-biotechnology' },
-              { name: 'M.Sc in Biotechnology', link: '#msc-biotechnology' },
+              { name: 'M.Sc in Biotechnology', link: '/m-sc-in-biotechnology' },
               { name: 'M.Sc in Environmental Science', link: '#msc-environmental-science' },
               { name: 'M.Sc. in Applied Microbiology', link: '#msc-applied-microbiology' },
               { name: 'M.Sc. Bioinformatics', link: '#msc-bioinformatics' },
