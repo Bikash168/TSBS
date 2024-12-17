@@ -46,7 +46,7 @@ export default function Academics() {
               { name: 'Faculty', link: '/faculty' },
               { name: 'Publications', link: '/publications' },
               { name: 'Laboratories', link: '/laboratories' },
-              { name: 'Library', link: '#library' },
+              { name: 'Library', link: '/library' },
               { name: 'Advisory Board', link: '#advisoryboard' },
               { name: 'Student Projects', link: '#studentprojects' },
               { name: 'Guest Seminars', link: '#guestseminars' },
